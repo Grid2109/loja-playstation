@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Playstation Store</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img class="logo" src="./img/logo.png" alt="logo" />
+        <nav>
+          <ul id="menu-list">
+            <li class="nav-li"><a class="nav-link">Consoles</a></li>
+            <li class="nav-li"><a class="nav-link">Acessórios</a></li>
+            <li class="nav-li"><a class="nav-link">Controles</a></li>
+            <li class="nav-li"><a class="nav-link">Outros</a></li>
+          </ul>
+        </nav>
+
+        <img
+          src="./img/menu.png"
+          alt="botão-menu"
+          class="menu-icon"
+          onclick="showMenu()"
+        />
+      </div>
+
+      <div class="row">
+        <div class="column-1">
+          <h2>
+            <a
+              href="https://www.playstation.com/pt-br/accessories/dualsense-wireless-controller/"
+              target="_blank"
+            >
+              PS5 DualSense
+            </a>
+          </h2>
+
+          <h3>Wireless Controller for PlayStation</h3>
+          <p>Controle Original</p>
+          <h4>R$ 222,50</h4>
+          <button class="buy">Comprar agora <img src="./img/arrow.png" alt="seta"></button>
+        </div>
+
+        <div class="column-2">
+          <img class="controller" src="./img/controller.png" alt="controle" />
+          <div class="color-box"></div>
+          <button class="add-cart">
+            <img src="./img/add.png" alt="adicionar-ao-carrinho" />
+          </button>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/playstation/" target="_blank">
+          <img class="face" src="./img/fb.png" alt="logo-facebook" />
+        </a>
+
+        <a href="https://www.instagram.com/playstation/" target="_blank">
+          <img class="insta" src="./img/ig.png" alt="logo-instagram" />
+        </a>
+
+        <a href="https://twitter.com/PlayStation" target="_blank">
+          <img class="twitter" src="./img/tw.png" alt="logo-twitter"/>
+        </a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const menuList = document.getElementById("menu-list");
+    menuList.style.maxHeight = "0px";
+
+    function showMenu() {
+      if (menuList.style.maxHeight == "0px") {
+        //menu fechado
+        menuList.style.maxHeight = "120px"; //abre menu
+      } else {
+        // se aberto
+        menuList.style.maxHeight = "0px"; //fechar menu
+      }
+    }
+  </script>
+</html>

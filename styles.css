@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(to bottom, #ff0000, #0044ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: alternateGradients 4s linear infinite;
+  background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
+  background-position: 0% 0%; /* Comece com o primeiro gradiente */
+}
+@keyframes alternateGradients {
+  0%, 100% {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,68,255,1) 83%);
+  }
+  50% {
+    background: rgb(40,7,90);
+    background: radial-gradient(circle, rgba(40,7,90,1) 0%, rgba(138,136,144,1) 78%, rgba(30,113,212,1) 83%);
+  }
+}
+.container {
+  width: 80%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+ }
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin: 30px 0;
+}
+
+nav {
+  width: 100%;
+  text-align: right;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  background: linear-gradient(
+    to bottom,
+    #ff0000,
+    #0044ff
+  ); /* Gradiente de vermelho para azul */
+  -webkit-background-clip: text;
+  background-clip: text; /* Isso permite que o gradiente seja aplicado apenas ao texto */
+  color: transparent; /* Torna o texto transparente para revelar o gradiente */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.column-1 {
+  margin-left: 50px;
+  position: relative;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  background: linear-gradient(
+    to bottom,
+    #ff0000,
+    #0044ff
+  ); /* Gradiente de vermelho para azul */
+  -webkit-background-clip: text;
+  background-clip: text; /* Isso permite que o gradiente seja aplicado apenas ao texto */
+  color: transparent; /* Torna o texto transparente para revelar o gradiente */
+}
+
+h3 {
+  font-size: 30px;
+  color: #707070;
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+.column-1 p {
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+}
+
+.column-1::before {
+  content: "";
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(#ff0000, #0044ff);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+  animation: alternateGradients 4s linear infinite;
+  background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
+  background-position: 0% 0%; /* Comece com o primeiro gradiente */
+}
+@keyframes alternateGradients {
+  0%, 100% {
+    background: linear-gradient(#ff0000, #0044ff);
+  }
+  50% {
+    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+  }
+}
+
+h4 {
+  font-size: 20px;
+  color: #000;
+  margin: 30px 0;
+}
+
+.buy {
+  width: 140px;
+  border: none;
+  padding: 12px 10px;
+  outline: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 2;
+  background: linear-gradient(to right, #ff0000, #0044ff);
+  transition: all 0.5s ease-in-out;
+  animation: alternateGradients 4s linear infinite;
+  background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
+  background-position: 0% 0%; /* Comece com o primeiro gradiente */
+}
+@keyframes alternateGradients {
+  0%, 100% {
+    background: linear-gradient(#ff0000, #0044ff);
+  }
+  50% {
+    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+  }
+}
+.buy img {
+  width: 30px;
+  display: none;
+}
+
+.buy:hover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+}
+.buy:hover img {
+  display: block;
+}
+.column-2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.controller {
+  width: 90%;
+  z-index: 2;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -20px
+    ); /* Ajuste a altura da flutuação conforme necessário */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.color-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#ff0000, #0044ff ) ;
+  height: 100%;
+  width: 90%;
+  border-radius: 20px 0 0 20px;
+  z-index: 1;
+  transform: translateX(150px);
+  animation: alternateGradients 4s linear infinite;
+  background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
+  background-position: 0% 0%; /* Comece com o primeiro gradiente */
+
+}
+@keyframes alternateGradients {
+  0%, 100% {
+    background: linear-gradient(#ff0000, #0044ff);
+  }
+  50% {
+    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+  }
+}
+.add-cart {
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.add-cart img {
+  height: 100%;
+  max-width: 55px;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links img {
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.face {
+  content: url("./img/fb.png");
+}
+.face:hover {
+  content: url("./img/face.png"); /* Imagem colorida */
+  transition: 1s ease-in-out;
+
+}
+
+.insta {
+  content: url("./img/ig.png"); /* Imagem em preto */
+}
+.insta:hover {
+  content: url("./img/insta.png"); /* Imagem colorida */
+  transition: 1s ease-in-out;
+}
+
+.twitter {
+  content: url("./img/tw.png"); /* Imagem em preto */
+}
+.twitter:hover {
+  content: url("./img/twitter.png"); /* Imagem colorida */
+  transition: 1s ease-in-out;
+}
+
+.menu-icon {
+  width: 25px;
+  margin-right: 15px;
+  display: none;
+}
+@media screen and (max-width: 700px){
+   .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .column-2 {
+    margin-bottom: 30px;
+  }
+  .color-box {
+    transform: translateX(70px);
+  }
+  #menu-list {
+    position: relative;
+    top: 60px;
+    left: 60px;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+  }  
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-li{
+    display: block;
+    margin-top: 5px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+}
