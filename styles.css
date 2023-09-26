@@ -6,25 +6,26 @@
 }
 
 body {
-  background: rgb(0, 212, 255);
-  background: linear-gradient(to bottom, #ff0000, #0044ff);
+  background: linear-gradient(to bottom, #00e1fd, #fc007a);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: alternateGradients 4s linear infinite;
-  background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
-  background-position: 0% 0%; /* Comece com o primeiro gradiente */
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  animation: alternateGradients 9s linear infinite;
 }
-@keyframes alternateGradients {
+
+@keyframes alternateGradientsBox {
   0%, 100% {
-    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,68,255,1) 83%);
+  height: 100%;
+    background: linear-gradient(#00e1fd, #fc007a);
   }
   50% {
-    background: rgb(40,7,90);
-    background: radial-gradient(circle, rgba(40,7,90,1) 0%, rgba(138,136,144,1) 78%, rgba(30,113,212,1) 83%);
+    background: linear-gradient(#505152, #6aa4c9, #0058fc);
   }
 }
+
 .container {
   width: 80%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
@@ -69,8 +70,8 @@ li {
 .nav-link:hover {
   background: linear-gradient(
     to bottom,
-    #ff0000,
-    #0044ff
+    #00e1fd,
+    #fc007a
   ); /* Gradiente de vermelho para azul */
   -webkit-background-clip: text;
   background-clip: text; /* Isso permite que o gradiente seja aplicado apenas ao texto */
@@ -93,23 +94,16 @@ h2 {
   font-size: 54px;
 }
 
+ h2:hover {
+  opacity: 0.8;
+ }
+
 h2 a {
   text-decoration: none;
 }
 
 a {
-  color: #000;
-}
-
-a:hover {
-  background: linear-gradient(
-    to bottom,
-    #ff0000,
-    #0044ff
-  ); /* Gradiente de vermelho para azul */
-  -webkit-background-clip: text;
-  background-clip: text; /* Isso permite que o gradiente seja aplicado apenas ao texto */
-  color: transparent; /* Torna o texto transparente para revelar o gradiente */
+ color: #000;
 }
 
 h3 {
@@ -129,22 +123,24 @@ h3 {
   content: "";
   width: 10px;
   height: 57%;
-  background: linear-gradient(#ff0000, #0044ff);
+  background: linear-gradient(#00e1fd, #fc007a);
   position: absolute;
   left: -40px;
   top: 8px;
-  animation: alternateGradients 4s linear infinite;
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
+  animation: alternateGradients 9s linear infinite;
 }
+
 @keyframes alternateGradients {
   0%, 100% {
-    background: linear-gradient(#ff0000, #0044ff);
+    background: linear-gradient(#00e1fd, #fc007a) ;
   }
   50% {
-    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+    background: linear-gradient(#505152, #6aa4c9, #0058fc);
   }
 }
+
 
 h4 {
   font-size: 20px;
@@ -161,20 +157,20 @@ h4 {
   border-radius: 6px;
   cursor: pointer;
   z-index: 2;
-  background: linear-gradient(to right, #ff0000, #0044ff);
-  transition: all 0.5s ease-in-out;
-  animation: alternateGradients 4s linear infinite;
+  background: linear-gradient(to right, #00e1fd, #fc007a);
+  animation: alternateGradientsBuy 9s linear infinite;
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
 }
-@keyframes alternateGradients {
+@keyframes alternateGradientsBuy {
   0%, 100% {
-    background: linear-gradient(#ff0000, #0044ff);
+    background: linear-gradient(#00e1fd, #fc007a) ;
   }
   50% {
-    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+    background: linear-gradient(#505152, #6aa4c9, #0058fc);
   }
 }
+
 .buy img {
   width: 30px;
   display: none;
@@ -220,23 +216,23 @@ h4 {
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(#ff0000, #0044ff ) ;
+  background: linear-gradient(#00e1fd, #fc007a) ;
   height: 100%;
   width: 90%;
   border-radius: 20px 0 0 20px;
   z-index: 1;
   transform: translateX(150px);
-  animation: alternateGradients 4s linear infinite;
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
-
+  animation: alternateGradientsBox 9s linear infinite;
 }
-@keyframes alternateGradients {
+@keyframes alternateGradientsBox {
   0%, 100% {
-    background: linear-gradient(#ff0000, #0044ff);
+  height: 100%;
+    background: linear-gradient(#00e1fd, #fc007a);
   }
   50% {
-    background: linear-gradient(#28075a, #8a8890, #1e71d4);
+    background: linear-gradient(#505152, #6aa4c9, #0058fc);
   }
 }
 .add-cart {
