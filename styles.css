@@ -6,23 +6,26 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #00e1fd, #fc007a);
+  background: rgb(0,225,253);
+  background: linear-gradient(90deg, rgba(0,225,253,1) 0%, rgba(252,0,122,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-size: 200% 100%;
   background-position: 0% 0%;
-  animation: alternateGradients 9s linear infinite;
+  animation: alternateGradientsBody 10s linear infinite;
 }
 
-@keyframes alternateGradientsBox {
+@keyframes alternateGradientsBody {
   0%, 100% {
   height: 100%;
-    background: linear-gradient(#00e1fd, #fc007a);
+  background: rgb(0,225,253);
+  background: linear-gradient(90deg, rgba(0,225,253,1) 0%, rgba(252,0,122,1) 100%);
   }
   50% {
-    background: linear-gradient(#505152, #6aa4c9, #0058fc);
+    background: rgb(80,81,82);
+    background: linear-gradient(90deg, rgba(106,164,201,1) 0%, rgba(0,88,252,1) 100%);
   }
 }
 
@@ -30,7 +33,7 @@ body {
   width: 80%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -63,7 +66,7 @@ li {
 .nav-link {
   cursor: pointer;
   text-decoration: none;
-  color: #000;
+  color: white;
   font-size: 14px;
 }
 
@@ -103,7 +106,7 @@ h2 a {
 }
 
 a {
- color: #000;
+ color: white;
 }
 
 h3 {
@@ -129,7 +132,7 @@ h3 {
   top: 8px;
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
-  animation: alternateGradients 9s linear infinite;
+  animation: alternateGradients 10s linear infinite;
 }
 
 @keyframes alternateGradients {
@@ -158,9 +161,9 @@ h4 {
   cursor: pointer;
   z-index: 2;
   background: linear-gradient(to right, #00e1fd, #fc007a);
-  animation: alternateGradientsBuy 9s linear infinite;
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
+  animation: alternateGradientsBuy 10s linear infinite;
 }
 @keyframes alternateGradientsBuy {
   0%, 100% {
@@ -224,8 +227,9 @@ h4 {
   transform: translateX(150px);
   background-size: 200% 100%; /* O dobro da largura para incluir ambos os gradientes */
   background-position: 0% 0%; /* Comece com o primeiro gradiente */
-  animation: alternateGradientsBox 9s linear infinite;
+  animation: alternateGradientsBox 10s linear infinite;
 }
+
 @keyframes alternateGradientsBox {
   0%, 100% {
   height: 100%;
@@ -261,28 +265,30 @@ h4 {
 }
 
 .face {
-  content: url("./img/fb.png");
+  content: url("./img/face.png");
+  transition: transform 500ms ease;
 }
 .face:hover {
-  content: url("./img/face.png"); /* Imagem colorida */
-  transition: 1s ease-in-out;
-
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 .insta {
-  content: url("./img/ig.png"); /* Imagem em preto */
+  content: url("./img/insta.png"); 
+  transition: transform 500ms ease;
 }
 .insta:hover {
-  content: url("./img/insta.png"); /* Imagem colorida */
-  transition: 1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 .twitter {
-  content: url("./img/tw.png"); /* Imagem em preto */
+  content: url("./img/twitter.png"); 
+  transition: transform 500ms ease;
 }
 .twitter:hover {
-  content: url("./img/twitter.png"); /* Imagem colorida */
-  transition: 1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 .menu-icon {
