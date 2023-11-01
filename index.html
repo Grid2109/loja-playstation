@@ -29,7 +29,7 @@
         </nav>
 
         <img
-          src="./img/menu.png"
+          src="./img/menu-aberto.png"
           alt="botão-menu"
           class="menu-icon"
           onclick="showMenu()"
@@ -78,21 +78,25 @@
         </a>
       </div>
     </div>
+
+    <script>
+
+      const menuList = document.getElementById("menu-list");
+      menuList.style.maxHeight = "0px";
+  
+      function showMenu() {
+        
+        if (menuList.style.maxHeight == "0px") {
+          //menu fechado
+          menuList.style.maxHeight = "120px"; //abre menu
+        } else {
+          // se aberto
+          menuList.style.maxHeight = "0px"; //fechar menu
+        }
+        console.log("Valor de menuList.style.maxHeight: " + menuList.style.maxHeight); // Esta linha imprime o valor no console
+      }
+    </script>
   </body>
 
-  <script>
-
-    const menuList = document.getElementById("menu-list");
-    menuList.style.maxHeight = "0px";
-
-    function showMenu() {
-      if (menuList.style.maxHeight == "0px") {
-        //menu fechado
-        menuList.style.maxHeight = "120px"; //abre menu
-      } else {
-        // se aberto
-        menuList.style.maxHeight = "0px"; //fechar menu
-      }
-    }
-  </script>
+  
 </html>
